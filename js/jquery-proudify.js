@@ -126,7 +126,7 @@
         }
 
         CodeSchool.prototype.url = function() {
-            return "http://www.codeschool.com/users/" + this.settings.username + ".json";
+            return "https://www.codeschool.com/users/" + this.settings.username + ".json";
         };
 
         CodeSchool.prototype.collect = function(result) {
@@ -142,7 +142,7 @@
 
         CodeSchool.prototype.render = function() {
             return CodeSchool.__super__.render.call(this, this.data, function(service, item, elements) {
-                elements.link.attr('href', 'http://www.codeschool.com/users/' + service.settings.username).attr('target', '_blank').appendTo(elements.li);
+                elements.link.attr('href', 'https://www.codeschool.com/users/' + service.settings.username).attr('target', '_blank').appendTo(elements.li);
                 return service.create('img', {
                     'alt': item.name,
                     'title': item.name,
