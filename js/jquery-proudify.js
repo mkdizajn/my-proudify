@@ -164,7 +164,7 @@
         }
 
         CoderWall.prototype.url = function() {
-            return 'http://coderwall.com/' + this.settings.username + '.json';
+            return 'https://coderwall.com/' + this.settings.username + '.json';
         };
 
         CoderWall.prototype.collect = function(result) {
@@ -180,7 +180,7 @@
 
         CoderWall.prototype.render = function() {
             return CoderWall.__super__.render.call(this, this.data, function(service, item, elements) {
-                elements.link.attr('href', 'http://coderwall.com/' + service.settings.username).attr('target', '_blank').appendTo(elements.li);
+                elements.link.attr('href', 'https://coderwall.com/' + service.settings.username).attr('target', '_blank').appendTo(elements.li);
                 return service.create('img', {
                     'alt': item.name,
                     'title': item.description,
